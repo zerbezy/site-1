@@ -9,7 +9,6 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background: url("moons.gif") no-repeat center/cover;
     }
     
     /* CSS for the login button */
@@ -21,9 +20,57 @@
       border: none;
       cursor: pointer;
     }
+
+    /* CSS for the toolbar */
+    .toolbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    /* CSS for the toolbar sections */
+    .toolbar-section {
+      margin-bottom: 20px;
+    }
+
+    /* CSS for the email input and submit button */
+    .email-form {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .email-input {
+      flex: 1;
+      margin-right: 10px;
+      padding: 5px;
+    }
+
+    .email-submit {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <button class="login-button">Login</button>
+
+  <div class="toolbar">
+    <div class="toolbar-section">
+      <h2>Contact Me</h2>
+      <form class="email-form" action="mailto:zerbezy@gmail.com" method="post" enctype="text/plain">
+        <input class="email-input" type="email" name="email" placeholder="Your email address" required>
+        <button class="email-submit" type="submit">Send</button>
+      </form>
+    </div>
+    <div class="toolbar-section">
+      <h2>Information about the Site</h2>
+      <p>This site provides information about various topics.</p>
+    </div>
+  </div>
 </body>
 </html>
